@@ -1,27 +1,21 @@
 package com.example.manasa_pt1119.pinchzoom;
 
 import android.graphics.Color;
-import android.net.Uri;
+
 import android.support.v4.util.ArrayMap;
-import android.support.v4.view.MotionEventCompat;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+
 import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
-import com.google.android.gms.appindexing.Action;
-import com.google.android.gms.appindexing.AppIndex;
-import com.google.android.gms.appindexing.Thing;
-import com.google.android.gms.common.api.GoogleApiClient;
 
 public class MainActivity extends AppCompatActivity {
     RelativeLayout relativeLayout;
     ScaleGestureDetector scaleGestureDetector;
-    ArrayMap<String,Object> data;
+
 
 
     @Override
@@ -48,17 +42,13 @@ public class MainActivity extends AppCompatActivity {
 
 
         private float currentSpan = 0;
-        boolean zoomMode=false;
-        boolean pinchMode=false;
+
 
         @Override
         public boolean onScaleBegin(ScaleGestureDetector detector) {
 
 
             currentSpan = scaleGestureDetector.getCurrentSpan();
-
-
-
             return super.onScaleBegin(detector);
         }
 
